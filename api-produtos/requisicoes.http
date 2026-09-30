@@ -1,0 +1,67 @@
+### Arquivo para a extensão "REST Client" do VS Code (alternativa ao Postman).
+### Clique em "Send Request" acima de cada requisição.
+
+@base = http://localhost:8080
+
+### 1) POST - Produto 1
+POST {{base}}/produtos
+Content-Type: application/json
+
+{ "nome": "Notebook Dell", "preco": 3500.00 }
+
+### POST - Produto 2
+POST {{base}}/produtos
+Content-Type: application/json
+
+{ "nome": "Mouse Logitech", "preco": 120.00 }
+
+### POST - Produto 3
+POST {{base}}/produtos
+Content-Type: application/json
+
+{ "nome": "Teclado Mecânico", "preco": 250.00 }
+
+### POST - Produto 4
+POST {{base}}/produtos
+Content-Type: application/json
+
+{ "nome": "Monitor LG 24 polegadas", "preco": 899.90 }
+
+### POST - Produto 5
+POST {{base}}/produtos
+Content-Type: application/json
+
+{ "nome": "Headset HyperX", "preco": 399.00 }
+
+### 2) GET - todos
+GET {{base}}/produtos
+
+### 3) GET - por ID
+GET {{base}}/produtos/1
+
+### 4) PUT - ID 1
+PUT {{base}}/produtos/1
+Content-Type: application/json
+
+{ "nome": "Notebook Dell Inspiron", "preco": 3799.90 }
+
+### PUT - ID 3
+PUT {{base}}/produtos/3
+Content-Type: application/json
+
+{ "nome": "Teclado Mecânico RGB", "preco": 289.90 }
+
+### PUT - ID 5
+PUT {{base}}/produtos/5
+Content-Type: application/json
+
+{ "nome": "Headset HyperX Cloud II", "preco": 449.90 }
+
+### 5) DELETE - ID 1
+DELETE {{base}}/produtos/1
+
+### 6) GET - lista final
+GET {{base}}/produtos
+
+### EXTRA: buscar um ID que não existe (deve dar 404)
+GET {{base}}/produtos/99
